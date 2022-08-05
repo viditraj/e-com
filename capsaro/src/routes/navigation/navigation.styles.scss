@@ -1,0 +1,48 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-link {
+      position: relative;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .nav-link:after{
+        position: absolute;
+        content: "";
+        background-color: grey;
+        height: 1px;
+        width: 0;
+        left: 0;
+        bottom: 0px;
+        transition: 0.3s;
+        margin-left: 6px;
+
+    }
+    .nav-link:hover{
+        color:black;
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+    .nav-link:hover:after{
+        width: 85%;
+    }
+  }
+}
